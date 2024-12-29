@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Kumar - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('pic3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-weight: 600;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 300;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero h2 {
+            font-size: 60px;
+            font-weight: 600;
+            animation: fadeInText 3s infinite;
+        }
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+        .hero a {
+            text-decoration: none;
+            color: #000;
+            background: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+        .hero a:hover {
+            background: #444;
+            color: #fff;
+        }
+        .about {
+            padding: 50px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .about img {
+            border-radius: 10px;
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .about h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #000;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+        .about a:hover {
+            background: #444;
+            color: #fff;
+        }
+        .skills {
+            padding: 50px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .skills h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .skills li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .projects {
+            padding: 70px 50px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .projects h3 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .project {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+        .project h4 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .project p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .contact {
+            padding: 50px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .contact h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .coding-profiles {
+            padding: 50px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .coding-profiles h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .coding-profiles a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+            color: #fff;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: text-decoration 0.3s;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Deepak Kumar</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Hi.. I am <span style="animation: fadeInText 3s infinite;">Deepak</span></h2>
+        <p>Discover my work and skills in web development, design, and technology. Let’s create something amazing together!</p>
+        <a href="#projects">View Projects</a>
+    </section>
+
+    <section class="about" id="about">
+        <img src="pic4.png" alt="Profile Picture">
+        <h3>About Me</h3>
+        <p>I am Deepak Kumar, a B.Tech student from NIT Jalandhar (2020-2025). I have interned as a Software Development Engineer at Byteoski Developers, working on ReactJS projects. My technical skills include ReactJS, NodeJS, and SQL. I have solved over 500 coding problems on platforms like LeetCode and GeeksforGeeks. I am passionate about building efficient and user-friendly web applications.</p>
+        <a href="resume.pdf" target="_blank">View Resume</a>
+    </section>
+
+    <section class="skills" id="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>ReactJS</li>
+            <li>NodeJS</li>
+            <li>SQL</li>
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+            <li>problem-solving</li>
+        </ul>
+    </section>
+
+    <section class="projects" id="projects">
+        <h3>Featured Projects</h3>
+        <div class="project-grid">
+            <div class="project">
+                <h4>Hirify</h4>
+                <p>A React-based hiring platform enabling admins to manage job postings and candidate details efficiently.</p>
+                <a href="https://github.com/Deepak619261/Hirify-A-React-Based-Hiring-Platform-for-Job-and-Candidate-Management">GitHub</a>
+            </div>
+            <div class="project">
+                <h4>HackMOL 3.0 - SASTIKSHA</h4>
+                <p>An e-commerce platform for reselling used books, developed during a 36-hour hackathon.</p>
+                <a href="https://github.com/Deepak619261/SASTIKSHA">GitHub</a>
+            </div>
+            <div class="project">
+                <h4>GestureSense</h4>
+                <p>A CNN-based hand sign language detection system built using TensorFlow and Keras.</p>
+                <a href="https://github.com/Deepak619261/GestureSense-Communication-Through-Hand-Sign-Recognition">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="coding-profiles">
+        <h3>Coding Profiles</h3>
+        <a href="https://github.com/Deepak619261" target="_blank">GitHub</a>
+        <a href="https://leetcode.com/u/Deepak_ARYA_79_/" target="_blank">LeetCode</a>
+        <a href="https://www.geeksforgeeks.org/user/learningpcz4/" target="_blank">GeeksforGeeks</a>
+    </section>
+
+    <section class="contact" id="contact">
+        <h3>Contact Information</h3>
+        <p>Email: <a href="mailto:deepakarya140831@gmail.com">deepakarya140831@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com">Click me</a></p>
+        <p>Twitter: <a href="https://x.com/DeepakArya31">Click me</a></p>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Deepak Kumar Portfolio. Built with ❤️ and creativity. <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
